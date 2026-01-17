@@ -41,16 +41,14 @@
   <header>
     <div class="wrap">
       <nav>
-        <div class="brand">
-          <img src="/assets/avatar.jpg" alt="Your photo" />
-          <div>
-            <div style="font-weight:700">Kyra Delray</div>
+        
             <div style="font-size:12px;color:#666">PhD Statistics Candidate, University of Oxford · Former International Rower · </div>
           </div>
         </div>
         <div class="menu">
           <a href="#about">About</a>
           <a href="#blog">Blog</a>
+          
           
           <a href="/cv.pdf" target="_blank">CV</a>
         </div>
@@ -63,7 +61,7 @@
       <img src="/assets/avatar-large.jpg" alt="Your portrait" />
       <div>
         <h1>Kyra Delray</h1>
-        <p class="lead">Short intro — who you are and what you do. One or two crisp sentences that explain your work and interests.</p>
+        <p class="lead">PhD Candidate in Statistics & Machine Learning at the University of Oxford. Former international rowing medalist with experience across academia, industry, and elite sport.</p>
         <p style="margin-top:12px"><a href="#blog">Blog</a></p>
       </div>
     </section>
@@ -72,19 +70,16 @@
       <div>
         <section id="about" class="card" style="margin-top:0">
           <h2>About</h2>
-          <p>PhD Candidate in Statistics & Machine Learning at the University of Oxford, specializing in personalized causal inference for recommendation systems with large observational datasets from smartphones and wearables. 
+          <p>
+        I love telling stories from big messy data that can be used to help indivudals understand themsleves better.
 
- 
-Part time Head of Data Science at Genletics, developed a patent-pending machine learning system for predicting personalized circadian rhythms using digital survey, genetic, sleep & physical activity data with >95% accuracy.
             
- 
-Experience in medical imaging and wearable technology at labs in the University of Oxford, improving diagnostic accuracy using sim-to-real methodology and human activity recognition through applying NLP algorithms with time-series data, respectively. 
+            
+          PhD Student in Statistics & Machine Learning specializing in personalized causal machine learning including optimal & dynamic treatment regime. 
 
+        Head of Data Science at Genletics working on perosnalized circadian rhythm. 
 
-            Former NIHR Research Fellow at UCL, developed statistical analysis methods for the effects of the menstrual cycle on physical and mental health, using wearable data and clinically validated digital health survey data. Also a lead statistician on two clinical attention-placebo trials. 
-
-
-            Strong teamwork, leadership & communication skills developed from being an international medalist, olympic training level, rowing athlete.</p>
+          
         </section>
 
         <section id="blog" class="card" style="margin-top:16px">
@@ -111,8 +106,16 @@ Experience in medical imaging and wearable technology at labs in the University 
           </ul>
         </section>
 
+        <section id="media" class="card" style="margin-top:16px">
+          <h2>Media</h2>
+          <ul>
+            <li><a href="#" target="_blank">Interview title — Outlet (Year)</a></li>
+            <li><a href="#" target="_blank">Podcast / video appearance — Platform (Year)</a></li>
+          </ul>
+        </section>
+
         <section id="rowing" class="card" style="margin-top:16px">
-          <h2>Rowing & Media</h2>
+          <h2>Rowing</h2>
           <ul id="rowing-list">
             <li>2026 Oxford Cambridge Boat Race, OUBC, Vice President</li>
             <li>2025 Oxford Cambridge Boat Race, OUBC,  Blue Boat</li>
@@ -151,7 +154,9 @@ Experience in medical imaging and wearable technology at labs in the University 
           <p><a href="/cv.pdf" target="_blank">CV (PDF)</a></p>
           <p><a href="#publications">Publications</a></p>
           <p><a href="#talks">Invited talks</a></p>
-          <p><a href="#rowing">Rowing & Media</a></p>
+          <p><a href="#media">Media</a></p>
+          <p><a href="#rowing">Rowing</a></p>
+          
         </div>
       </aside>
     </div>
@@ -169,7 +174,7 @@ Experience in medical imaging and wearable technology at labs in the University 
 document.getElementById('year').textContent = new Date().getFullYear();
 
 async function loadPosts(){
-  const username = 'YOUR_MEDIUM_USERNAME';
+  const username = 'kyradelray';
   const rssUrl = `https://medium.com/feed/@${username}`;
   const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
