@@ -140,6 +140,16 @@ font-size: 14px;
 .card li:last-child { border-bottom: none; }
 .card li strong { font-weight: 500; }
 .card li em { color: var(--text-muted); }
+/* Scrollable news feed */
+#news ul {
+max-height: 260px;
+overflow-y: auto;
+padding-right: 6px;
+}
+#news ul::-webkit-scrollbar { width: 6px; }
+#news ul::-webkit-scrollbar-track { background: transparent; }
+#news ul::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+#news ul { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
 /* Blog posts */
 .post {
 padding: 12px 0;
