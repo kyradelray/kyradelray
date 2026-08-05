@@ -1,755 +1,388 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="utf-8" />
-
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-
 <title>Kyra Delray</title>
-
 <meta name="description" content="PhD Candidate in Statistics & Machine Learning, University of Oxford" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-
 :root {
-
 --maxw: 1000px;
-
 --accent: #1e3a5f;
-
 --accent-light: #2c5282;
-
 --bg: #f8f9fa;
-
 --card-bg: #ffffff;
-
 --text: #1a1a1a;
-
 --text-muted: #64748b;
-
 --border: #e2e8f0;
-
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
-
 font-family: 'Inter', system-ui, -apple-system, sans-serif;
-
 background: var(--bg);
-
 color: var(--text);
-
 line-height: 1.6;
-
 font-size: 15px;
-
 }
-
 /* Header */
-
 header {
-
 background: var(--card-bg);
-
 border-bottom: 1px solid var(--border);
-
 position: sticky;
-
 top: 0;
-
 z-index: 100;
-
 }
-
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px 24px; }
-
 nav { display: flex; align-items: center; justify-content: space-between; }
-
 .nav-brand {
-
 font-weight: 600;
-
 font-size: 18px;
-
 color: var(--accent);
-
 text-decoration: none;
-
 }
-
 .nav-links { display: flex; gap: 8px; }
-
 .nav-links a {
-
 color: var(--text-muted);
-
 text-decoration: none;
-
 padding: 8px 14px;
-
 border-radius: 6px;
-
 font-size: 14px;
-
 font-weight: 500;
-
 transition: all 0.2s;
-
 }
-
 .nav-links a:hover {
-
 color: var(--accent);
-
 background: rgba(30, 58, 95, 0.06);
-
 }
-
 /* Main */
-
 main { max-width: var(--maxw); margin: 0 auto; padding: 32px 24px; }
-
 /* Hero */
-
 .hero {
-
 background: var(--card-bg);
-
 border-radius: 12px;
-
 padding: 32px;
-
 border: 1px solid var(--border);
-
 margin-bottom: 24px;
-
 }
-
 .hero h1 {
-
 font-size: 28px;
-
 font-weight: 600;
-
 margin-bottom: 8px;
-
 color: var(--text);
-
 }
-
 .hero h1 span {
-
 font-size: 14px;
-
 font-weight: 400;
-
 color: var(--text-muted);
-
 }
-
 .hero .lead {
-
 color: var(--text-muted);
-
 font-size: 16px;
-
 max-width: 600px;
-
 }
-
 .hero-links {
-
 margin-top: 16px;
-
 display: flex;
-
 gap: 12px;
-
 }
-
 .hero-links a {
-
 color: var(--accent);
-
 text-decoration: none;
-
 font-weight: 500;
-
 font-size: 14px;
-
 }
-
 .hero-links a:hover { text-decoration: underline; }
-
 /* Grid */
-
 .grid {
-
 display: grid;
-
 grid-template-columns: 1fr 300px;
-
 gap: 24px;
-
 }
-
 /* Cards */
-
 .card {
-
 background: var(--card-bg);
-
 border-radius: 12px;
-
 padding: 24px;
-
 border: 1px solid var(--border);
-
 margin-bottom: 20px;
-
 }
-
 .card h2 {
-
 font-size: 18px;
-
 font-weight: 600;
-
 margin-bottom: 16px;
-
 color: var(--text);
-
 }
-
 .card h3 {
-
 font-size: 15px;
-
 font-weight: 600;
-
 margin-bottom: 12px;
-
 color: var(--text);
-
 }
-
 .card p { color: var(--text); margin-bottom: 8px; }
-
 .card a {
-
 color: var(--accent);
-
 text-decoration: none;
-
 }
-
 .card a:hover { text-decoration: underline; }
-
 /* Lists */
-
 .card ul {
-
 list-style: none;
-
 padding: 0;
-
 }
-
 .card li {
-
 padding: 10px 0;
-
 border-bottom: 1px solid var(--border);
-
 font-size: 14px;
-
 }
-
 .card li:last-child { border-bottom: none; }
-
 .card li strong { font-weight: 500; }
-
 .card li em { color: var(--text-muted); }
-
 /* Blog posts */
-
 .post {
-
 padding: 12px 0;
-
 border-bottom: 1px solid var(--border);
-
 }
-
 .post:last-child { border-bottom: none; }
-
 .post a {
-
 font-weight: 500;
-
 color: var(--accent);
-
 text-decoration: none;
-
 font-size: 15px;
-
 }
-
 .post a:hover { text-decoration: underline; }
-
 .post .date {
-
 font-size: 12px;
-
 color: var(--text-muted);
-
 margin-top: 4px;
-
 }
-
 .post .excerpt {
-
 font-size: 14px;
-
 color: var(--text-muted);
-
 margin-top: 6px;
-
 line-height: 1.5;
-
 }
-
 /* Sidebar */
-
 .sidebar .card { margin-bottom: 16px; }
-
 .sidebar .card p { margin-bottom: 6px; font-size: 14px; }
-
 .sidebar .card .muted { font-size: 12px; color: var(--text-muted); }
-
 /* Footer */
-
 footer {
-
 max-width: var(--maxw);
-
 margin: 0 auto;
-
 padding: 24px;
-
 text-align: center;
-
 color: var(--text-muted);
-
 font-size: 13px;
-
 }
-
 /* Responsive */
-
 @media (max-width: 768px) {
-
 .grid { grid-template-columns: 1fr; }
-
 .nav-links { display: none; }
-
 .hero { padding: 24px; }
-
 .hero h1 { font-size: 24px; }
-
 }
-
 </style>
-
 </head>
-
 <body>
-
 <header>
-
 <div class="wrap">
-
 <nav>
-
 <a href="#" class="nav-brand">Kyra Delray</a>
-
 <div class="nav-links">
-
 <a href="#news">News</a>
-
 <a href="#about">About</a>
-
 <a href="#publications">Publications</a>
-
 <a href="#talks">Talks</a>
-
 <a href="#service">Service</a>
-
 <a href="#blog">Blog</a>
-
 <a href="kyra_delray_cv.pdf" target="_blank">CV</a>
-
 </div>
-
 </nav>
-
 </div>
-
 </header>
-
 <main>
-
 <section class="hero">
-
 <h1>Kyra Delray <span>(née Edwards)</span></h1>
-
 <p class="lead">PhD Candidate in Statistics & Machine Learning at the University of Oxford. Former international rowing medalist with experience across academia, industry, and elite sport.</p>
-
 <div class="hero-links">
-
 <a href="mailto:kyra.delray@wolfson.ox.ac.uk">Email</a>
-
 <a href="https://github.com/kyradelray" target="_blank">GitHub</a>
-
 <a href="https://medium.com/@kyradelray" target="_blank">Medium</a>
-
 </div>
-
 </section>
-
 <div class="grid">
-
 <div class="main-content">
-
 <section id="news" class="card">
-
 <h2>News</h2>
-
 <ul>
-
 <li>
-
+<strong>Aug 2026</strong> — Released medRxiv preprint on sex and menstrual cycle differences in the mood-activity association <a href="https://www.medrxiv.org/content/10.64898/2026.07.24.26358675v1" target="_blank">📄</a>
+</li>
+<li>
 <strong>Apr 2026</strong> — Released arXiv preprint on MCAnalysis <a href="https://arxiv.org/pdf/2604.12536" target="_blank">📄</a>
-
 </li>
-
 <li>
-
 <strong>Apr 2026</strong> — Organised <a href="https://eurocim.org/oxford-2026/" target="_blank">EuroCIM 2026</a>, the European Causal Inference Meeting, hosted at the University of Oxford
-
 </li>
-
 <li>
-
 <strong>Apr 2026</strong> — We won the Boat Race <a href="https://www.ox.ac.uk/news/2026-04-04-oxford-s-women-triumph-historic-80th-boat-race" target="_blank">🏆</a>
-
 </li>
-
 <li>
-
 <strong>Feb 2026</strong> — Invited talk at the Health Research From Home Conference, Google HQ London <a href="https://sites.manchester.ac.uk/health-research-from-home/2024/09/12/annual-event/" target="_blank">🎤</a>
-
 </li>
-
 </ul>
-
 </section>
-
 <section id="about" class="card">
-
 <h2>About</h2>
-
 <p>I love telling stories from big messy data that can be used to help individuals understand themselves better.</p>
-
 <p>PhD Student in Statistics & Machine Learning specializing in personalized causal machine learning including optimal & dynamic treatment regimes.</p>
-
 <p>Head of Data Science at Genletics working on personalized circadian rhythm.</p>
-
 </section>
-
 <section id="publications" class="card">
-
 <h2>Publications</h2>
-
 <ul>
-
 <li>
-
+Delray K, Zeitler JK, Hayes JF, Kandola A, Keay N, Evans RJ. (2026).
+<strong>Sex and menstrual cycle differences in the mood-activity association should inform cycle-aware digital phenotyping.</strong>
+<em>medRxiv preprint</em>, doi:10.64898/2026.07.24.26358675.
+<a href="https://www.medrxiv.org/content/10.64898/2026.07.24.26358675v1" target="_blank">medRxiv</a>
+</li>
+<li>
 Delray K, Lewis G, Grace B, Hayes J, Evans R. (2026).
-
 <strong>MCAnalysis: An Open-Source Package for Preprocessing, Modelling, and Visualisation of Menstrual Cycle Effects in Digital Health Data.</strong>
-
 <em>arXiv preprint</em>, arXiv:2604.12536.
-
 <a href="https://arxiv.org/pdf/2604.12536" target="_blank">arXiv</a>
-
 </li>
-
 <li>
-
 Delray K, Lewis G, Hayes JF. (2025).
-
 <strong>Tracking mood symptoms across the menstrual cycle in women with depression using ecological momentary assessment and heart rate variability.</strong>
-
 <em>BMJ Mental Health</em>, 28:e301674.
-
 <a href="https://doi.org/10.1136/bmjment-2025-301674" target="_blank">doi</a>
-
 </li>
-
 <li>
-
 Kandola A, et al.
-
 <strong>Randomized attention-placebo controlled trial of a digital self-management platform for adult asthma.</strong>
-
 <em>Annals of Allergy, Asthma & Immunology</em>, Volume 131, Issue 5, S58.
-
 </li>
-
 <li>
-
 Kandola A, Edwards K, Muller MA, et al. (2024).
-
 <strong>Digitally managing depression: A fully remote randomised attention-placebo controlled trial.</strong>
-
 <em>Digital Health</em>, 10:20552076241260409.
-
 <a href="https://doi.org/10.1177/20552076241260409" target="_blank">doi</a>
-
 </li>
-
 <li>
-
 Delray K, Lewis G. (2023).
-
 <strong>Effect of the menstrual cycle on heart rate.</strong>
-
 Poster, <em>Women's Health Innovation Summit</em>.
-
 </li>
-
 <li>
-
 Drummond I, Coffey D, Bolton S, Edwards K, et al. (2024).
-
 <strong>The Impact of COVID-19 on Bicycle-Related Injuries Managed at a Level 1 Major Trauma Center.</strong>
-
 <em>Cureus</em>, 16(5):e59465.
-
 <a href="https://doi.org/10.7759/cureus.59465" target="_blank">doi</a>
-
 </li>
-
 </ul>
-
 </section>
-
 <section id="talks" class="card">
-
 <h2>Invited Talks</h2>
-
 <ul>
-
 <li><strong>Research From Home Conference, Google HQ London</strong> — Mental Health, Heart Rate and the Menstrual Cycle (Feb 2026)</li>
-
 <li><strong>St. Paul's School</strong> — Year 9s & Rowers, Black History Month (Oct 2025)</li>
-
 <li><strong>Podium Institute Annual Conference</strong> — AI reliability and performance modelling in sport (Sep 2025)</li>
-
 <li><strong>NIHR Pre-Doctoral Fellowship Conference</strong> — Guide to menstrual-cycle analysis (Nov 2024)</li>
-
 <li><strong>Stanford Legal "Making Life Work"</strong> — Developing effective team culture (Sep 2024)</li>
-
 <li><strong>MIT</strong> — Reducing Bias in Health Care Workshop (Jul 2024)</li>
-
 <li><strong>BBC Boat Race Documentary</strong> — "How the Menstrual Cycle Affects Athletes" (Apr 2024, 6M viewers)</li>
-
 <li><strong>BBC Boat Race Coverage</strong> — Presenter and commentator (2023)</li>
-
 </ul>
-
 </section>
-
 <section id="service" class="card">
-
 <h2>Service &amp; Community</h2>
-
 <ul>
-
 <li>
-
 <strong>Organising Committee &amp; Poster Reviewer</strong> —
 <em>European Causal Inference Meeting (EuroCIM 2026)</em>, University of Oxford
-
 </li>
-
 <li>
-
 <strong>Admissions Interviewer</strong> —
 <em>Jesus College, University of Oxford</em> (Undergraduate Mathematics)
-
 </li>
-
 </ul>
-
 </section>
-
 <section id="blog" class="card">
-
 <h2>Blog</h2>
-
 <div id="posts">
-
 <div style="color:var(--text-muted)">Loading posts...</div>
-
 </div>
-
 </section>
-
 <section id="rowing" class="card">
-
 <h2>Rowing</h2>
-
 <ul>
-
 <li><strong>2026</strong> Oxford Cambridge Boat Race, OUBC Vice President</li>
-
 <li><strong>2025</strong> Oxford Cambridge Boat Race, OUBC Blue Boat</li>
-
 <li><strong>2023</strong> World Rowing Championships, 2x</li>
-
 <li><strong>2022</strong> World Rowing Cup II, 4x Silver</li>
-
 <li><strong>2019</strong> World Rowing Championship, 2x</li>
-
 <li><strong>2018</strong> World U23 Rowing Championships, 4x Bronze</li>
-
 <li><strong>2017</strong> World U23 Rowing Championships, 4x Gold (Medical Sub)</li>
-
 <li><strong>2015</strong> World Junior Rowing Championships, Silver</li>
-
 <li><strong>2015</strong> National Junior Champion, 1x</li>
-
 </ul>
-
 </section>
-
 </div>
-
 <aside class="sidebar">
-
 <div class="card">
-
 <h3>Contact</h3>
-
 <p><a href="mailto:kyra.delray@wolfson.ox.ac.uk">kyra.delray@wolfson.ox.ac.uk</a></p>
-
 <p class="muted">University of Oxford</p>
-
 </div>
-
 <div class="card">
-
 <h3>Links</h3>
-
 <p><a href="kyra_delray_cv.pdf" target="_blank">CV (PDF)</a></p>
-
 <p><a href="https://github.com/kyradelray" target="_blank">GitHub</a></p>
-
 <p><a href="https://medium.com/@kyradelray" target="_blank">Medium</a></p>
-
 </div>
-
 <div class="card">
-
 <h3>Software</h3>
-
 <p><a href="https://kyradelray.shinyapps.io/shiny-app/" target="_blank">MCAnalysis Web App</a></p>
-
 <p class="muted">Analyze menstrual cycle effects on health outcomes</p>
-
 <p><a href="https://github.com/kyradelray/mcanalysis" target="_blank">View on GitHub</a></p>
-
 </div>
-
 </aside>
-
 </div>
-
 </main>
-
 <footer>
-
 © <span id="year"></span> Kyra Delray
-
 </footer>
-
 <script>
-
 document.getElementById('year').textContent = new Date().getFullYear();
-
 async function loadPosts() {
-
 const username = 'kyradelray';
-
 const rssUrl = `https://medium.com/feed/@${username}`;
-
 const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-
 try {
-
 const res = await fetch(api);
-
 const data = await res.json();
-
 const container = document.getElementById('posts');
-
 container.innerHTML = '';
-
 data.items.slice(0, 5).forEach(item => {
-
 const el = document.createElement('div');
-
 el.className = 'post';
-
 el.innerHTML = `
-
 <a href="${item.link}" target="_blank">${item.title}</a>
-
 <div class="date">${item.pubDate.slice(0, 10)}</div>
-
 <div class="excerpt">${item.description.replace(/<[^>]*>/g, '').slice(0, 140)}...</div>
-
 `;
-
 container.appendChild(el);
-
 });
-
 } catch (e) {
-
 document.getElementById('posts').innerHTML = '<div style="color:var(--text-muted)">Unable to load posts.</div>';
-
 }
-
 }
-
 loadPosts();
-
 </script>
-
 </body>
-
 </html>
